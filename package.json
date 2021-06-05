@@ -24,6 +24,7 @@
   "author": "Ismail Opatola",
   "license": "ISC",
   "dependencies": {
+    "babel-eslint": "^10.1.0",
     "draft-js": "^0.11.7",
     "firebase": "^8.6.5",
     "firebase-admin": "^9.8.0",
