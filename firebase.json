@@ -22,21 +22,19 @@
       "npm --prefix \"$RESOURCE_DIR\" run lint"
     ]
   },
-  "hosting": {
-    "public": "public",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
-    "cleanUrls": true,
-    "rewrites": [
-      {
-        "source": "**",
-        "function": "nextjs-server"
-      }
-    ]
-  },
+  "hosting": [
+		{
+			"site": "opatola-website.web.app",
+			"public": "public/",
+			"cleanUrls": true,
+			"rewrites": [
+				{
+					"source": "**",
+					"function": "nextjs-server"
+				}
+			]
+		}
+	],
   "storage": {
     "rules": "storage.rules"
   },
