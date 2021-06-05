@@ -1,19 +1,44 @@
 {
-  "name": "Blogv0",
+  "name": "opatola-website",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Opatola website, built with NextJs, Cloud Functions and firebase hosting",
+  "engines": {
+    "node": "14"
+  },
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "_start": "npm run shell",
+    "clean": "rimraf nextjs/",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "predeploy": "npm run clean && next build",
+    "_deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log",
+    "deploy": "firebase deploy"
   },
   "keywords": [],
-  "author": "",
+  "author": "Ismail Opatola",
   "license": "ISC",
   "dependencies": {
     "draft-js": "^0.11.7",
+    "firebase": "^8.6.5",
+    "firebase-admin": "^9.8.0",
+    "firebase-functions": "^3.14.1",
     "next": "^10.2.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-draft-wysiwyg": "^1.14.7"
-  }
+  },
+  "devDependencies": {
+    "eslint": "^7.6.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0",
+    "rimraf": "^3.0.2",
+    "shelljs": "^0.8.4"
+  },
+  "private": true
 }

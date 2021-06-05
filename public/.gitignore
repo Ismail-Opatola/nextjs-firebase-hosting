@@ -1,0 +1,2 @@
+# edge case - firebase-hosting
+# the public/ dir should not be empty, else won't app work with FBH as FBH expects the public/ not to be empty
