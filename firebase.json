@@ -19,12 +19,14 @@
 			"readme.md"
 		],
     "predeploy": [
-      "npm --prefix \"$RESOURCE_DIR\" run lint"
+      "npm --prefix \"%RESOURCE_DIR%\" run clean",
+      "npm --prefix \"%RESOURCE_DIR%\" run lint",
+      "npm --prefix \"%RESOURCE_DIR%\" run predeploy"
     ]
   },
   "hosting": [
 		{
-			"site": "opatola-website.web.app",
+			"target": "opatola-website",
 			"public": "public/",
 			"cleanUrls": true,
 			"rewrites": [
