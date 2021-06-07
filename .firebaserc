@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "opatola-website"
+  },
+  "targets": {
+    "opatola-website": {
+      "hosting": {
+        "opatola-website": [
+          "opatola-website"
+        ]
+      }
+    }
   }
 }
