@@ -18,20 +18,3 @@ Pages
 + Dashboard - list all post
 + Editor - edit/create post
 + Media - upload/view/delete/rename/copylink/ media files
-
-
-"hosting": {
-    "public": "public",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
-    "cleanUrls": true,
-    "rewrites": [
-      {
-        "source": "**",
-        "function": "nextjs-server"
-      }
-    ]
-  },
